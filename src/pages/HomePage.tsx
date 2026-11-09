@@ -2,7 +2,6 @@ import React from 'react';
 import { 
   ArrowRight, 
   CheckCircle2, 
-  Sparkles, 
   ShieldCheck, 
   Layers,
   ChevronRight,
@@ -52,16 +51,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
               <div className="space-y-4 text-slate-600 text-sm sm:text-[15px] leading-relaxed reveal-word delay-150">
                 <p>
-                  Pioneer Fab Tech is a professionally driven architectural and industrial metal fabrication company specializing in delivering high-quality, precision-engineered fabrication solutions for modern infrastructure, commercial developments and industrial applications.
+                  Founded in 2012 by Sagthabhai Darghabhai Chaudhari, Pioneer Fab Tech is an ISO 9001:2008 certified architectural and industrial metal fabrication workshop based in Vasai-Virar, Palghar (Maharashtra). Over the past 14 years, we have grown into a trusted fabrication partner for premier architects, commercial mall developers, and interior designers across Mumbai, Pune, Hyderabad, and nationwide.
                 </p>
                 <p>
-                  With a strong focus on innovation, craftsmanship and technical excellence, we provide comprehensive fabrication services that combine structural strength, functional performance and contemporary aesthetics.
+                  Operating from our 6,500+ sq.ft. workshop equipped with high-speed CNC fiber lasers, 160-ton hydraulic press brakes, and certified argon TIG/MIG welding bays, we handle everything under one roof: from initial CAD drawing analysis and physical site measurements to precision cutting, pre-assembly, and final on-site installation.
                 </p>
                 <p>
-                  Our expertise spans architectural metalwork, customized steel fabrication, advanced laser cutting, glass and stainless-steel installations, and specialized industrial fabrication. From concept development and customized manufacturing to fabrication and installation, we aim to deliver solutions that meet the unique requirements of every project.
+                  Our core specialties include custom spiral and helical steel staircases, titanium PVD coated decorative laser jalis, commercial structural glass facades, elevator portal architraves, and heavy industrial plant mezzanines.
                 </p>
                 <p>
-                  At Pioneer Fab Tech, we believe that every structure deserves precision, durability and attention to detail. Our commitment is to provide dependable workmanship, quality materials and professional service at every stage of execution.
+                  We do not cut corners or compromise on metal grades. Every staircase, facade frame, and railing is 100% trial-assembled on our shop floor before dispatch, guaranteeing that materials fit your site with zero welding errors or handover delays.
                 </p>
               </div>
 
@@ -96,7 +95,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 {/* Floating Technical Badge Overlay */}
                 <div className="absolute bottom-4 left-4 right-4 bg-slate-950/85 backdrop-blur-md rounded-xl p-3.5 border border-slate-700/60 shadow-lg text-white">
                   <div className="flex items-center gap-2 text-amber-400 text-[11px] font-black uppercase tracking-wider">
-                    <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
                     <span>On-Site Precision Execution</span>
                   </div>
                   <p className="text-xs text-slate-200 mt-1 font-medium leading-snug">
@@ -159,8 +158,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           
           <div className="text-center max-w-3xl mx-auto space-y-3 reveal-word">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-              <span>The Pioneer Advantage</span>
+              <ShieldCheck className="w-3.5 h-3.5 text-amber-600" />
+              <span>DIRECT WORKSHOP MANUFACTURING • VASAI-VIRAR</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
               Why Architects, Builders & Contractors Choose Us
@@ -264,7 +263,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               </div>
               <div className="mt-5 pt-4 border-t border-slate-200/70 flex items-center gap-2 text-[11px] font-bold text-slate-700">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Factory Pre-Assembly • Seamless Site Fit</span>
+                <span>Factory Pre-Assembly • Precise Site Fit</span>
               </div>
             </div>
 
@@ -326,7 +325,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           
           <div className="text-center max-w-3xl mx-auto space-y-2 reveal-word">
-            <span className="text-[#ff7a00] font-bold text-xs uppercase tracking-wider">
+            <span className="text-amber-400 font-bold text-xs uppercase tracking-wider">
               Prime Grade Certified Raw Materials
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
@@ -344,7 +343,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 <div
                   key={material.id}
                   onClick={() => onNavigate('materials')}
-                  className="group relative w-[240px] sm:w-[270px] h-[220px] sm:h-[240px] shrink-0 rounded-2xl overflow-hidden border border-slate-700/80 hover:border-[#ff7a00] transition-all duration-300 bg-slate-950 cursor-pointer select-none snap-start shadow-lg"
+                  className="group relative w-[240px] sm:w-[270px] h-[220px] sm:h-[240px] shrink-0 rounded-2xl overflow-hidden border border-slate-700/80 hover:border-amber-400 transition-all duration-300 bg-slate-950 cursor-pointer select-none snap-start shadow-lg"
                 >
                   <img 
                     src={material.image} 
@@ -354,7 +353,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   />
                   {/* Clean gradient overlay with clean material name and subtitle */}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent flex flex-col justify-end p-4">
-                    <span className="text-[10px] font-black uppercase tracking-wider text-[#ff7a00] mb-1">
+                    <span className="text-[10px] font-black uppercase tracking-wider text-amber-400 mb-1">
                       {material.categoryLabel}
                     </span>
                     <h3 className="text-sm sm:text-base font-black text-white leading-snug group-hover:text-amber-300 transition-colors line-clamp-1">
@@ -373,7 +372,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <div className="text-center pt-2">
             <button
               onClick={() => onNavigate('materials')}
-              className="inline-flex items-center gap-2.5 px-7 py-3 rounded-xl bg-[#ff7a00] hover:bg-[#d95c18] text-white font-bold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-md hover:shadow-lg"
+              className="inline-flex items-center gap-2.5 px-7 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-md hover:shadow-lg"
             >
               <span>Explore All 11 Material Categories</span>
               <ArrowRight className="w-4 h-4" />

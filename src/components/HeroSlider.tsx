@@ -17,19 +17,19 @@ const SLIDES: SlideItem[] = [
     id: 1,
     image: './assets/aistudio/WhatsApp_Image_2026-11-03_at_1.04.00_PM__1__3cfa08e4.jpeg',
     headline: 'Architectural Steel & Precision Spiral Staircases',
-    description: 'Bespoke helical staircases, double-height atrium steelwork, and floor-to-ceiling glass lobby installations engineered with IS 2062 heavy structural steel and master craftsmanship.',
+    description: 'Engineered helical and spiral staircases fabricated with tested IS 2062 heavy structural steel, curved laser-cut stringers, and laminated glass balustrades for duplex homes, atriums, and commercial spaces.',
   },
   {
     id: 2,
     image: './assets/aistudio/WhatsApp_Image_2026-11-03_at_1.04.01_PM_5eb73795.jpeg',
     headline: 'Luxury CNC Laser Cut Jali & Decorative Partitions',
-    description: 'Sub-millimeter CNC fiber laser cut metal screens, luxury titanium PVD gold partitions, and architectural geometric room dividers for premium residences and hospitality interiors.',
+    description: 'Precision laser-cut metal screens and titanium PVD coated partitions in gold, rose gold, and bronze for residential living rooms, temple mandirs, and commercial hospitality interiors.',
   },
   {
     id: 3,
     image: './assets/aistudio/WhatsApp_Image_2026-11-03_at_1.04.04_PM__1__313234b2.jpeg',
     headline: 'Commercial Glass Facades & Boutique Storefronts',
-    description: 'Heavy-duty stainless steel & aluminium architectural storefronts, frameless structural glass facades, and automated luxury commercial entrance systems engineered for lasting durability.',
+    description: 'Heavy-duty stainless steel storefronts, frameless spider glazing facades, and architectural entrance doors built for high-footfall retail showrooms and commercial complexes.',
   },
 ];
 

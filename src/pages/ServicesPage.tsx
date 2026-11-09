@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { 
   CheckCircle2, 
   ArrowRight, 
-  Sparkles, 
   Layers, 
   Clock, 
   Compass, 
@@ -29,7 +28,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
         {/* Page Header */}
         <div className="max-w-3xl reveal-word">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 text-xs font-semibold mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+            <Layers className="w-3.5 h-3.5 text-amber-600" />
             <span>Industrial & Architectural Capabilities</span>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">

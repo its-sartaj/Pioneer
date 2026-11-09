@@ -3,9 +3,9 @@ import {
   Send, 
   Upload, 
   MessageCircle, 
-  CheckCircle2, 
+  CheckCircle2,
+  ShieldCheck,
   Copy, 
-  Sparkles, 
   Phone, 
   MapPin, 
   FileText, 
@@ -35,7 +35,7 @@ const CATEGORIES = [
   { id: 'facade-doors', label: 'Commercial Facades & Doors', rateDesc: 'Toughened glass storefronts, arched steel doors' },
   { id: 'elevator-cladding', label: 'Elevator Portal Cladding', rateDesc: 'Transom & jamb stainless steel wrapping' },
   { id: 'industrial', label: 'Industrial Heavy Metalwork', rateDesc: 'Plant platforms, stairs & security barrier cages' },
-  { id: 'other', label: 'Other Custom Metal Fabrication', rateDesc: 'Specialized bespoke fabrication engineering' },
+  { id: 'other', label: 'Other Custom Metal Fabrication', rateDesc: 'Specialized custom fabrication engineering' },
 ];
 
 const SAMPLE_REFERENCE_DRAWINGS = [
@@ -158,7 +158,7 @@ Website: vasai-virar, Maharashtra`;
         {/* Header Breadcrumb & Title */}
         <div className="max-w-3xl mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 text-xs font-semibold mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+            <ShieldCheck className="w-3.5 h-3.5 text-amber-600" />
             <span>Fast Turnaround • Free Initial CAD Guidance</span>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">

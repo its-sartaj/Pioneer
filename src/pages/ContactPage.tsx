@@ -110,7 +110,7 @@ Sent via Pioneer Fab Tech Contact Portal`);
             >
               Home
             </button>
-            <span className="text-slate-400 select-none">&gt;</span>
+            <span className="text-slate-400 select-none">•</span>
             <span className="text-white font-bold select-none">Contact Us</span>
           </div>
         </div>

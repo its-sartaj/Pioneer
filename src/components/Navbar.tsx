@@ -6,7 +6,6 @@ import {
   X, 
   ChevronRight,
   ArrowRight,
-  Sparkles,
   Building2,
   ShieldCheck,
   Award,

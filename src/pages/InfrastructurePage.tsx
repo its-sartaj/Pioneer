@@ -5,7 +5,6 @@ import {
   Hammer, 
   ShieldCheck, 
   ArrowRight, 
-  Sparkles, 
   Layers, 
   CheckCircle2, 
   MapPin, 
@@ -26,7 +25,7 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({ onNaviga
         {/* Page Header */}
         <div className="max-w-3xl reveal-word">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 text-xs font-semibold mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+            <Building2 className="w-3.5 h-3.5 text-amber-600" />
             <span>Vasai-Virar Manufacturing Facility</span>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">

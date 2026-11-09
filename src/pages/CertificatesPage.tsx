@@ -171,7 +171,7 @@ export const CertificatesPage: React.FC<CertificatesPageProps> = ({ onNavigate }
             >
               Home
             </button>
-            <span className="text-slate-400 select-none">&gt;</span>
+            <span className="text-slate-400 select-none">•</span>
             <span className="text-white font-bold select-none">Certificate</span>
           </div>
         </div>

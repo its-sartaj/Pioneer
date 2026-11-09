@@ -110,10 +110,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         className="absolute top-0 left-0 w-72 h-[1.5px] bg-gradient-to-r from-slate-200 via-slate-400 to-transparent pointer-events-none rotate-[45deg] origin-top-left opacity-60"
       />
 
-      {/* 3. Ambient Metallic Glow Flares */}
-      <div className="absolute top-1/4 left-1/5 w-[500px] h-[300px] bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-[450px] h-[250px] bg-cyan-600/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-10 left-20 w-64 h-16 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
+
 
       {/* 4. Steel Warehouse Framework Truss SVG (Right Side Background Silhouette) */}
       <div className="absolute bottom-0 right-0 w-[480px] h-[260px] pointer-events-none opacity-30 hidden md:block">
@@ -231,15 +228,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Fiery Orange Laser Glow Underline Flare under logo */}
-            <div className="relative h-[2px] w-full max-w-[280px] my-2">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#ff7a00] to-transparent shadow-[0_0_12px_#ff7a00]" />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-300 to-transparent blur-[1px]" />
-            </div>
+            {/* Clean Architectural Divider */}
+            <div className="h-px w-full max-w-[260px] bg-slate-800/90 my-3" />
 
             {/* Exact Company Description from Reference Image */}
             <p className="text-[13px] text-slate-300 leading-relaxed font-normal pr-2">
-              Pioneer Fab Tech is a premier architectural and industrial metal fabrication company specializing in precision spiral staircases, SS & glass balustrades, laser cut decorative partitions, commercial facades, and elevator portal cladding.
+              Founded in 2012, Pioneer Fab Tech is an ISO 9001:2008 certified metal fabrication workshop based in Vasai-Virar, Palghar. We manufacture architectural spiral staircases, CNC fiber laser partitions, commercial storefront facades, and certified SS balustrades for leading architects, developers, and luxury residences.
             </p>
 
           </div>
@@ -433,17 +427,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
       </div>
 
-      {/* =========================================================================
-          HORIZONTAL GLOWING CYAN/BLUE LASER LIGHT LINE (ACROSS ENTIRE FOOTER)
-         ========================================================================= */}
-      <div className="relative w-full h-[2px]">
-        {/* Main sharp laser line */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-cyan-400 to-blue-500 shadow-[0_0_12px_#06b6d4]" />
-        {/* Intense Cyan Halo Glow */}
-        <div className="absolute -top-[2px] inset-x-0 h-[6px] bg-gradient-to-r from-transparent via-cyan-400/50 to-blue-500/30 blur-[2px] pointer-events-none" />
-        {/* Horizontal Laser Hotspot / Flare in Right-Center */}
-        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-48 h-2 bg-cyan-300 rounded-full blur-[2px] shadow-[0_0_16px_#38bdf8]" />
-      </div>
+      {/* Solid Architectural Divider */}
+      <div className="w-full h-px bg-slate-800" />
 
       {/* =========================================================================
           BOTTOM COPYRIGHT BAR & CURVED METALLIC CAPSULE DOCK
@@ -457,7 +442,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </div>
 
           {/* Sculpted Metallic Curved Capsule / Pill Housing 3 Buttons (Exact Match to Reference Image) */}
-          <div className="relative flex items-center p-1.5 pl-3.5 rounded-full bg-gradient-to-r from-[#0d2a58] via-[#091c3d] to-[#040e21] border border-cyan-400/50 shadow-[0_0_18px_rgba(6,182,212,0.35)]">
+          <div className="relative flex items-center p-1 pl-3.5 rounded-full bg-slate-900 border border-slate-800 shadow-sm">
             <div className="flex items-center gap-3">
               
               {/* Button 1: White circle button with black up arrow (Back-to-Top) */}

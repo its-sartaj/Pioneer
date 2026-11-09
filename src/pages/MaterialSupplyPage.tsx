@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { 
   Layers, 
   CheckCircle2, 
-  Sparkles, 
   ArrowRight, 
   Phone, 
   MessageSquare, 
@@ -266,7 +265,7 @@ export const MaterialSupplyPage: React.FC<MaterialSupplyPageProps> = ({ onNaviga
             
             <div className="lg:col-span-6 space-y-5">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-[#d95c18] text-xs font-semibold">
-                <Sparkles className="w-3.5 h-3.5 text-[#ff7a00]" />
+                <Layers className="w-3.5 h-3.5 text-[#ff7a00]" />
                 <span>Central Material Yard - Vasai Virar, Palghar</span>
               </div>
 

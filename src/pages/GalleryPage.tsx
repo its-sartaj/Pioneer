@@ -194,7 +194,7 @@ export const GalleryPage: React.FC<GalleryPageProps> = ({ onNavigate }) => {
             >
               Home
             </button>
-            <span className="text-slate-400 select-none">&gt;</span>
+            <span className="text-slate-400 select-none">•</span>
             <span className="text-white font-bold select-none">Gallery</span>
           </div>
         </div>
