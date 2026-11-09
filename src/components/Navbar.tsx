@@ -84,15 +84,16 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
     };
   }, [mobileMenuOpen]);
 
-  // Exact navigation items:
-  // Home | About | Our Services v | Our Project v | Material Supply v | Factory | Gallery | Certificate | Contact
+  // Exact navigation items matching requirement 8:
+  // Home, About Us, Our Services, Our Projects, Gallery, Material Supply, Factory Facility, Certificates, Contact Us
+  // Navigation items matching exact user reference design (media_1794230732414_cd48a6db.png):
+  // Home | About | Our Services v | Our Project v | Material Supply v | Gallery | Certificate | Contact
   const navLinks: { id: PageId; label: string; hasDropdown?: boolean }[] = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About', hasDropdown: false },
     { id: 'services', label: 'Our Services', hasDropdown: true },
     { id: 'projects', label: 'Our Project', hasDropdown: true },
     { id: 'materials', label: 'Material Supply', hasDropdown: true },
-    { id: 'infrastructure', label: 'Factory Facility', hasDropdown: false },
     { id: 'gallery', label: 'Gallery', hasDropdown: false },
     { id: 'certificates', label: 'Certificate', hasDropdown: false },
     { id: 'contact', label: 'Contact', hasDropdown: false },
@@ -211,20 +212,20 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
           <div className="flex items-center gap-6">
             <a 
               href={`tel:${COMPANY_INFO.phoneRaw}`} 
-              className="flex items-center gap-2 text-slate-800 hover:text-[#d95c18] transition-colors group cursor-pointer"
+              className="flex items-center gap-2 text-slate-800 hover:text-amber-600 transition-colors group cursor-pointer"
             >
-              <Phone className="w-3.5 h-3.5 text-[#d95c18] group-hover:scale-110 transition-transform" />
+              <Phone className="w-3.5 h-3.5 text-amber-600 group-hover:scale-110 transition-transform" />
               <span className="font-semibold text-slate-900">{COMPANY_INFO.phone}</span>
             </a>
             
-            {/* Bich ka divider line between phone and email */}
+            {/* Divider line between phone and email */}
             <div className="h-3.5 w-px bg-slate-300" />
 
             <a 
               href={`mailto:${COMPANY_INFO.email}`} 
-              className="flex items-center gap-2 text-slate-700 hover:text-[#d95c18] transition-colors group cursor-pointer"
+              className="flex items-center gap-2 text-slate-700 hover:text-amber-600 transition-colors group cursor-pointer"
             >
-              <Mail className="w-3.5 h-3.5 text-[#d95c18] group-hover:scale-110 transition-transform" />
+              <Mail className="w-3.5 h-3.5 text-amber-600 group-hover:scale-110 transition-transform" />
               <span className="text-slate-700 font-medium">{COMPANY_INFO.email}</span>
             </a>
           </div>
@@ -249,9 +250,9 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
               />
             </button>
 
-            {/* Desktop Navigation Links - Modern Seamless Corporate Navigation */}
+            {/* Desktop Navigation Links with Clean Column Cells & Thin Vertical Divider Lines (Exact Match to User Reference) */}
             <nav 
-              className="hidden xl:flex items-center gap-1 xl:gap-1.5 2xl:gap-2 h-full"
+              className="hidden xl:flex items-center h-full border-l border-slate-200"
               onMouseLeave={handleMouseLeave}
             >
               {navLinks.map((link, index) => {
@@ -290,34 +291,38 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
                 return (
                   <div 
                     key={link.id}
-                    className="relative h-full flex items-center group/navitem"
+                    className="relative h-full flex items-center border-r border-slate-200 group/navitem"
                     onMouseEnter={() => handleMouseEnter(link.id, link.hasDropdown)}
                   >
-                    {/* Modern pill button with refined typography */}
+                    {/* Clean column button matching user reference design */}
                     <button
                       onClick={() => handleLinkClick(link.id)}
-                      className={`relative flex items-center gap-1 xl:gap-1.5 px-2.5 xl:px-3 2xl:px-4 py-2 rounded-xl text-[13.5px] 2xl:text-[14.5px] font-semibold transition-all duration-200 cursor-pointer select-none whitespace-nowrap ${
+                      className={`h-full flex items-center gap-1.5 px-3.5 xl:px-4 2xl:px-5.5 text-[14px] 2xl:text-[15px] font-bold transition-colors cursor-pointer select-none whitespace-nowrap ${
                         isActive 
-                          ? 'text-amber-600 font-bold bg-amber-50/90 shadow-2xs ring-1 ring-amber-500/20' 
+                          ? link.id === 'home'
+                            ? 'text-[#8B2E1D] bg-[#FFFDF1] font-extrabold'
+                            : 'text-[#8B2E1D] bg-white font-extrabold'
                           : isDropdownOpen
-                          ? 'text-amber-600 bg-slate-100/80 font-semibold'
-                          : 'text-slate-700 hover:text-amber-600 hover:bg-slate-100/70'
+                          ? 'text-[#8B2E1D] bg-slate-50'
+                          : 'text-[#182A4D] hover:text-[#8B2E1D] hover:bg-slate-50/70'
                       }`}
                     >
                       <span>{link.label}</span>
                       {link.hasDropdown && (
                         <ChevronDown 
-                          className={`w-3.5 h-3.5 stroke-[2.2] transition-transform duration-200 ${
-                            isDropdownOpen ? 'rotate-180 text-amber-600' : 'text-slate-400 group-hover/navitem:text-amber-600'
+                          className={`w-3.5 h-3.5 stroke-[2.8] ml-0.5 transition-transform duration-200 ${
+                            isDropdownOpen ? 'rotate-180 text-[#8B2E1D]' : 'text-slate-500 group-hover/navitem:text-[#8B2E1D]'
                           }`} 
                         />
                       )}
                     </button>
 
-                    {/* Subtle Active Indicator Pill under button */}
-                    {isActive && (
-                      <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-6 h-[3px] bg-amber-500 rounded-full" />
-                    )}
+                    {/* Solid Red/Burgundy Bottom Border Bar (Active tab has it solid, hover smoothly shows it) */}
+                    <span 
+                      className={`absolute bottom-0 left-0 right-0 h-[3.5px] bg-[#8B2E1D] transition-all duration-200 pointer-events-none z-10 ${
+                        isActive ? 'scale-x-100 opacity-100' : 'scale-x-0 opacity-0 group-hover/navitem:scale-x-100 group-hover/navitem:opacity-100'
+                      }`} 
+                    />
 
                     {/* Interactive Dropdown with Live Preview Box */}
                     {link.hasDropdown && isDropdownOpen && subItems.length > 0 && (
@@ -374,7 +379,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
                                     alt={currentPreviewItem.title} 
                                     className="w-full h-full object-cover transition-all duration-300"
                                   />
-                                  <div className="absolute top-2 left-2 bg-slate-950/85 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-xs">
+                                  <div className="absolute top-2 left-2 bg-slate-950/85 backdrop-blur-xs text-white text-xs font-bold px-2 py-0.5 rounded shadow-xs">
                                     {currentPreviewItem.tag}
                                   </div>
                                 </div>
@@ -382,12 +387,12 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
                                 <h4 className="text-xs font-bold text-slate-900 line-clamp-1">
                                   {currentPreviewItem.title}
                                 </h4>
-                                <p className="text-[11px] text-slate-600 mt-1 line-clamp-2 leading-relaxed">
+                                <p className="text-xs text-slate-600 mt-1 line-clamp-2 leading-relaxed">
                                   {currentPreviewItem.subtitle}
                                 </p>
 
                                 {currentPreviewItem.specs && (
-                                  <div className="mt-2.5 pt-2 border-t border-slate-200 text-[10px] text-slate-500 font-medium truncate">
+                                  <div className="mt-2.5 pt-2 border-t border-slate-200 text-xs text-slate-500 font-medium truncate">
                                     {currentPreviewItem.specs}
                                   </div>
                                 )}
@@ -396,7 +401,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
                               <div className="pt-3 border-t border-slate-200 flex items-center justify-between">
                                 <button
                                   onClick={() => handleLinkClick(currentPreviewItem.targetPage)}
-                                  className="text-[11px] font-bold text-slate-900 hover:text-amber-600 inline-flex items-center gap-1 cursor-pointer"
+                                  className="text-xs font-bold text-slate-900 hover:text-amber-600 inline-flex items-center gap-1 cursor-pointer"
                                 >
                                   <span>View Details</span>
                                   <ChevronRight className="w-3.5 h-3.5" />
@@ -414,27 +419,27 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
               })}
             </nav>
 
-            {/* Right Side Action Button: Professional Quick Quote CTA */}
-            <div className="hidden xl:flex items-center pl-2">
-              <button
-                onClick={() => handleLinkClick('enquiry')}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-95 cursor-pointer"
-              >
-                <span>Get a Quote</span>
-                <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" />
-              </button>
-            </div>
 
-            {/* Mobile View - Clean 3-Line Hamburger Menu Button */}
+
+            {/* Mobile View - Call Button & Clean 3-Line Hamburger Button (Requirement 20) */}
             <div className="flex xl:hidden items-center gap-2">
+              <a
+                href={`tel:${COMPANY_INFO.phoneRaw}`}
+                className="w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200 flex items-center justify-center transition-all active:scale-95 cursor-pointer shadow-2xs"
+                title="Call Pioneer Fab Tech"
+                aria-label="Call Now"
+              >
+                <Phone className="w-4 h-4 text-amber-600 fill-amber-600/20" />
+              </a>
+
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="group p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white shadow-sm border border-slate-700 hover:border-[#E5A93C] transition-all active:scale-95 cursor-pointer flex items-center justify-center w-11 h-11"
+                className="group p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white shadow-sm border border-slate-700 hover:border-amber-400 transition-all active:scale-95 cursor-pointer flex items-center justify-center w-10 h-10"
                 aria-label="Open navigation menu"
                 title="Open menu"
               >
-                <Menu className="w-6 h-6 text-white group-hover:text-[#E5A93C] transition-colors stroke-[2.2]" />
+                <Menu className="w-5 h-5 text-white group-hover:text-amber-400 transition-colors stroke-[2.5]" />
               </button>
             </div>
 
@@ -545,64 +550,29 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
                   )}
                 </div>
 
-                {/* Sub-Items Details Accordion (Appears after clicking arrow or item) */}
+                {/* Sub-Items Plain Text Accordion without images and without inner scrolling (Requirement 21) */}
                 {hasSubItems && isExpanded && (
-                  <div className="bg-slate-50/95 border border-slate-200/90 rounded-2xl p-2.5 space-y-2 mt-1 shadow-2xs animate-in fade-in slide-in-from-top-2 duration-150">
-                    <div className="flex items-center justify-between px-2 pt-1 pb-1 border-b border-slate-200/80 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
-                      <span>{link.label}</span>
-                      <button
-                        type="button"
-                        onClick={() => handleLinkClick(link.id)}
-                        className="text-amber-600 hover:text-amber-700 font-bold inline-flex items-center gap-1 text-xs capitalize cursor-pointer"
-                      >
-                        <span>View Page</span>
-                        <ArrowRight className="w-3 h-3" />
-                      </button>
-                    </div>
-
-                    <div className="space-y-1.5 max-h-[300px] overflow-y-auto pr-1">
+                  <div className="bg-slate-50 border border-slate-200/90 rounded-xl p-2 space-y-1 mt-1 shadow-2xs animate-in fade-in slide-in-from-top-1 duration-150">
+                    <div className="space-y-1">
                       {subItems.map((item) => (
-                        <div
+                        <button
                           key={item.id}
+                          type="button"
                           onClick={() => handleLinkClick(item.targetPage)}
-                          className="p-2 rounded-xl bg-white hover:bg-amber-50/70 border border-slate-200/80 hover:border-amber-300 transition-all cursor-pointer flex items-center gap-2.5 group shadow-2xs"
+                          className="w-full p-2.5 rounded-lg text-left text-xs font-semibold text-slate-700 hover:text-amber-600 hover:bg-white transition-all flex items-center justify-between cursor-pointer border border-transparent hover:border-slate-200/60"
                         >
-                          <img 
-                            src={item.image} 
-                            alt={item.title} 
-                            className="w-11 h-11 rounded-lg object-cover border border-slate-200 shrink-0" 
-                          />
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center gap-1.5">
-                              <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 group-hover:bg-amber-100 group-hover:text-amber-800">
-                                {item.tag}
-                              </span>
-                            </div>
-                            <h5 className="text-xs font-bold text-slate-900 group-hover:text-amber-600 truncate mt-0.5">
-                              {item.title}
-                            </h5>
-                            <p className="text-[11px] text-slate-500 truncate">
-                              {item.subtitle}
-                            </p>
-                            {item.specs && (
-                              <p className="text-[10px] text-slate-400 truncate mt-0.5 font-medium">
-                                {item.specs}
-                              </p>
-                            )}
-                          </div>
-                          <div className="w-6 h-6 rounded-full bg-slate-100 group-hover:bg-amber-500 group-hover:text-white text-slate-400 flex items-center justify-center shrink-0 transition-colors">
-                            <ArrowRight className="w-3 h-3" />
-                          </div>
-                        </div>
+                          <span className="truncate pr-2">{item.title}</span>
+                          <ChevronRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                        </button>
                       ))}
                     </div>
 
                     <button
                       type="button"
                       onClick={() => handleLinkClick(link.id)}
-                      className="w-full py-2.5 px-3 rounded-xl bg-white hover:bg-amber-500 hover:text-white border border-slate-200 hover:border-amber-500 text-slate-800 text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-2xs"
+                      className="w-full mt-1 py-2 px-3 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer border border-amber-200/60"
                     >
-                      <span>Explore All {link.label}</span>
+                      <span>View All {link.label}</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </button>
                   </div>
@@ -612,18 +582,18 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
           })}
         </div>
 
-        {/* Drawer Footer Contact with Clean Light Theme */}
+        {/* Drawer Footer Contact with Clean Light Theme (Requirement 21: Keep Call Us and WhatsApp buttons at bottom) */}
         <div className="p-4 border-t border-slate-100 bg-slate-50/90 space-y-3 shrink-0">
           <div className="space-y-0.5 text-xs text-slate-600">
-            <p className="font-extrabold text-slate-900 text-[13px]">Pioneer Fab Tech</p>
+            <p className="font-extrabold text-slate-900 text-sm">Pioneer Fab Tech</p>
             <p className="font-semibold text-slate-700">{COMPANY_INFO.phone}</p>
-            <p className="text-slate-500 text-[11px] truncate">{COMPANY_INFO.email}</p>
+            <p className="text-slate-500 text-xs truncate">{COMPANY_INFO.email}</p>
           </div>
 
           <div className="flex gap-2">
             <a
               href={`tel:${COMPANY_INFO.phoneRaw}`}
-              className="flex-1 py-2.5 rounded-xl bg-[#0a192f] hover:bg-slate-800 text-white text-xs font-bold text-center flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+              className="flex-1 py-2.5 rounded-xl bg-[#0B1220] hover:bg-slate-800 text-white text-xs font-bold text-center flex items-center justify-center gap-1.5 transition-colors shadow-xs"
             >
               <Phone className="w-3.5 h-3.5 text-amber-400" />
               <span>Call Us</span>
@@ -633,7 +603,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
               href={COMPANY_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 py-2.5 rounded-lg bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold text-center flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+              className="flex-1 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold text-center flex items-center justify-center gap-1.5 transition-colors shadow-xs"
             >
               <MessageCircle className="w-3.5 h-3.5 fill-white text-[#25D366]" />
               <span>WhatsApp</span>
