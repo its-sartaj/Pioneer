@@ -13,6 +13,7 @@ import {
   MessageCircle
 } from 'lucide-react';
 import { COMPANY_INFO, SERVICES, PROJECTS, INFRASTRUCTURE_SPECS, OFFICIAL_CERTIFICATES, MATERIAL_SUPPLY_ITEMS } from '../data/siteData';
+import logoImg from '../assets/pioneer_logo_new.png';
 
 export type PageId = 
   | 'home' 
@@ -233,18 +234,18 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
       {/* Main Navigation Bar - Exactly matching the uploaded reference (image_a42555f8.png) */}
       <div className="bg-white border-b border-slate-200 relative">
         <div className="max-w-[1536px] w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between xl:justify-end xl:gap-8 h-18 lg:h-20">
+          <div className="flex items-center justify-between h-18 lg:h-20">
             
             {/* Logo Section - Shifted closer to the right toward Home nav item on laptop/desktop */}
             <button 
               onClick={() => handleLinkClick('home')}
-              className="flex items-center text-left py-1 cursor-pointer shrink-0 mr-auto xl:mr-6"
+              className="flex items-center text-left py-1 cursor-pointer shrink-0"
               title="Pioneer Fab Tech Home"
             >
               <img 
-                src={COMPANY_INFO.logoUrl} 
+                src={logoImg} 
                 alt="Pioneer Fab Tech - Innovation Precision Excellence" 
-                className="h-10 sm:h-12 lg:h-13 w-auto max-w-[220px] sm:max-w-[260px] object-contain transition-transform duration-200 hover:scale-[1.01]"
+                className="h-11 sm:h-12 lg:h-14 w-auto max-w-[220px] sm:max-w-[260px] object-contain transition-transform duration-200 hover:scale-[1.01]"
               />
             </button>
 
@@ -295,7 +296,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
                     {/* Clean cell button with exact bold typography from reference screenshot */}
                     <button
                       onClick={() => handleLinkClick(link.id)}
-                      className={`h-full flex items-center gap-1.5 px-4 lg:px-5 xl:px-6 text-[15px] font-bold transition-colors cursor-pointer select-none whitespace-nowrap ${
+                      className={`h-full flex items-center gap-1 xl:gap-1.5 px-3 xl:px-3.5 2xl:px-5 text-[13.5px] 2xl:text-[15px] font-bold transition-colors cursor-pointer select-none whitespace-nowrap ${
                         isActive 
                           ? 'text-[#8B2E1D] bg-amber-50/70 font-extrabold' 
                           : isDropdownOpen
@@ -451,7 +452,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
         <div className="p-4 border-b border-slate-100 flex items-center justify-between bg-white shrink-0">
           <div className="bg-slate-50 border border-slate-200/90 rounded-xl px-3 py-1.5 max-w-[180px] shadow-2xs">
             <img 
-              src={COMPANY_INFO.logoUrl} 
+              src={logoImg} 
               alt="Pioneer Fab Tech" 
               className="h-8 w-auto object-contain"
             />

@@ -9,6 +9,7 @@ import {
   ArrowUp
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/siteData';
+import logoImg from '../assets/pioneer_logo_new.png';
 import { PageId } from './Navbar';
 
 interface FooterProps {
@@ -222,7 +223,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 {/* Inner white glossy surface */}
                 <div className="bg-gradient-to-b from-white via-[#fcfdff] to-[#f1f5f9] rounded-xl px-4 py-3 flex items-center justify-center shadow-inner">
                   <img 
-                    src={COMPANY_INFO.logoUrl} 
+                    src={logoImg} 
                     alt="Pioneer Fab Tech - Innovation Precision Excellence" 
                     className="h-12 sm:h-13 w-auto object-contain max-w-full"
                   />
