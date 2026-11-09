@@ -225,7 +225,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   <img 
                     src={logoImg} 
                     alt="Pioneer Fab Tech - Innovation Precision Excellence" 
-                    className="h-18 sm:h-20 lg:h-22 w-auto object-contain max-w-full"
+                    className="h-12 sm:h-14 w-auto object-contain max-w-full"
                   />
                 </div>
               </div>
