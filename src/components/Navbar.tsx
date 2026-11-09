@@ -239,14 +239,16 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
             {/* Logo Section - Shifted closer to the right toward Home nav item on laptop/desktop */}
             <button 
               onClick={() => handleLinkClick('home')}
-              className="flex items-center text-left py-1 cursor-pointer shrink-0"
+              className="flex items-center text-left py-1 cursor-pointer shrink-0 transition-transform duration-200 hover:scale-[1.02]"
               title="Pioneer Fab Tech Home"
             >
-              <img 
-                src={logoImg} 
-                alt="Pioneer Fab Tech - Innovation Precision Excellence" 
-                className="h-11 sm:h-12 lg:h-14 w-auto max-w-[220px] sm:max-w-[260px] object-contain transition-transform duration-200 hover:scale-[1.01]"
-              />
+              <div className="bg-white rounded-xl p-1 shadow-xs border border-slate-200/80 flex items-center">
+                <img 
+                  src={logoImg} 
+                  alt="Pioneer Fab Tech - Innovation Precision Excellence" 
+                  className="h-12 sm:h-14 lg:h-16 w-auto max-w-[200px] object-contain"
+                />
+              </div>
             </button>
 
             {/* Desktop Navigation Links with Clean Column Cells & Thin Vertical Divider Lines (Exact Match) */}
