@@ -249,9 +249,9 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
               />
             </button>
 
-            {/* Desktop Navigation Links with Clean Column Cells & Thin Vertical Divider Lines (Exact Match) */}
+            {/* Desktop Navigation Links - Modern Seamless Corporate Navigation */}
             <nav 
-              className="hidden xl:flex items-center h-full border-l border-slate-200"
+              className="hidden xl:flex items-center gap-1 xl:gap-1.5 2xl:gap-2 h-full"
               onMouseLeave={handleMouseLeave}
             >
               {navLinks.map((link, index) => {
@@ -290,35 +290,34 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
                 return (
                   <div 
                     key={link.id}
-                    className="relative h-full flex items-center border-r border-slate-200 group/navitem"
+                    className="relative h-full flex items-center group/navitem"
                     onMouseEnter={() => handleMouseEnter(link.id, link.hasDropdown)}
                   >
-                    {/* Clean cell button with exact bold typography from reference screenshot */}
+                    {/* Modern pill button with refined typography */}
                     <button
                       onClick={() => handleLinkClick(link.id)}
-                      className={`h-full flex items-center gap-1 xl:gap-1.5 px-3 xl:px-3.5 2xl:px-5 text-[13.5px] 2xl:text-[15px] font-bold transition-colors cursor-pointer select-none whitespace-nowrap ${
+                      className={`relative flex items-center gap-1 xl:gap-1.5 px-2.5 xl:px-3 2xl:px-4 py-2 rounded-xl text-[13.5px] 2xl:text-[14.5px] font-semibold transition-all duration-200 cursor-pointer select-none whitespace-nowrap ${
                         isActive 
-                          ? 'text-[#8B2E1D] bg-amber-50/70 font-extrabold' 
+                          ? 'text-amber-600 font-bold bg-amber-50/90 shadow-2xs ring-1 ring-amber-500/20' 
                           : isDropdownOpen
-                          ? 'text-[#8B2E1D] bg-slate-50'
-                          : 'text-[#0a192f] hover:text-[#8B2E1D] hover:bg-slate-50/70'
+                          ? 'text-amber-600 bg-slate-100/80 font-semibold'
+                          : 'text-slate-700 hover:text-amber-600 hover:bg-slate-100/70'
                       }`}
                     >
-                      <span className="pb-0.5">{link.label}</span>
+                      <span>{link.label}</span>
                       {link.hasDropdown && (
                         <ChevronDown 
-                          className={`w-3.5 h-3.5 stroke-[2.8] transition-transform duration-200 ${
-                            isDropdownOpen ? 'rotate-180 text-[#8B2E1D]' : 'text-slate-600 group-hover/navitem:text-[#8B2E1D]'
+                          className={`w-3.5 h-3.5 stroke-[2.2] transition-transform duration-200 ${
+                            isDropdownOpen ? 'rotate-180 text-amber-600' : 'text-slate-400 group-hover/navitem:text-amber-600'
                           }`} 
                         />
                       )}
                     </button>
 
-                    {/* Full-Width Bottom Border Hover Animation:
-                        Only active when hovering with mouse, never stays stuck on active tab, smoothly retracts as soon as mouse leaves */}
-                    <span 
-                      className="absolute bottom-0 left-0 right-0 h-[3.5px] bg-[#8B2E1D] transition-transform duration-[550ms] ease-out origin-left pointer-events-none z-10 scale-x-0 group-hover/navitem:scale-x-100" 
-                    />
+                    {/* Subtle Active Indicator Pill under button */}
+                    {isActive && (
+                      <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-6 h-[3px] bg-amber-500 rounded-full" />
+                    )}
 
                     {/* Interactive Dropdown with Live Preview Box */}
                     {link.hasDropdown && isDropdownOpen && subItems.length > 0 && (
@@ -415,7 +414,18 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
               })}
             </nav>
 
-            {/* Mobile View - 3-DOT MENU BUTTON ON RIGHT (QUOTE BUTTON REMOVED AS REQUESTED) */}
+            {/* Right Side Action Button: Professional Quick Quote CTA */}
+            <div className="hidden xl:flex items-center pl-2">
+              <button
+                onClick={() => handleLinkClick('enquiry')}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-sm hover:shadow-md hover:scale-[1.02] active:scale-95 cursor-pointer"
+              >
+                <span>Get a Quote</span>
+                <ArrowRight className="w-3.5 h-3.5 stroke-[2.5]" />
+              </button>
+            </div>
+
+            {/* Mobile View - 3-DOT MENU BUTTON ON RIGHT */}
             <div className="flex xl:hidden items-center">
               <button
                 type="button"
