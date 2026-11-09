@@ -37,11 +37,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             {/* Left Column: Company Profile & About Us Text */}
             <div className="lg:col-span-7 space-y-5">
               <div className="reveal-word">
-                <div className="flex items-center gap-2 text-xs font-black tracking-wider uppercase text-amber-600">
-                  <span className="w-2 h-2 rounded-full bg-amber-500" />
-                  <span>COMPANY PROFILE</span>
-                </div>
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight mt-1">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
                   PIONEER FAB TECH
                 </h1>
                 <p className="text-xs sm:text-sm font-semibold italic text-slate-500 mt-1 tracking-wide">
@@ -114,10 +110,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 reveal-word">
-            <span className="text-amber-600 font-bold text-xs uppercase tracking-wider">
-              What We Build
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mt-1">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
               Our Core Fabrication Services
             </h2>
           </div>
@@ -157,10 +150,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3 reveal-word">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-700 text-xs font-bold uppercase tracking-wider">
-              <ShieldCheck className="w-3.5 h-3.5 text-amber-600" />
-              <span>DIRECT WORKSHOP MANUFACTURING • VASAI-VIRAR</span>
-            </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
               Why Architects, Builders & Contractors Choose Us
             </h2>

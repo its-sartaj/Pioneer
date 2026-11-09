@@ -55,11 +55,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             {/* Left Column: Authentic Human Company Story */}
             <div className="lg:col-span-7 space-y-5">
               <div>
-                <div className="flex items-center gap-2 text-xs font-black tracking-wider uppercase text-amber-600">
-                  <span className="w-2 h-2 rounded-full bg-amber-500" />
-                  <span>COMPANY PROFILE & HISTORY</span>
-                </div>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight mt-1">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight">
                   Built on 14+ Years of Precision Engineering
                 </h2>
                 <p className="text-xs sm:text-sm font-semibold italic text-slate-500 mt-1 tracking-wide">
@@ -142,10 +138,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
       <section className="py-14 sm:py-20 bg-slate-100/70 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="text-amber-600 font-bold text-xs uppercase tracking-wider">
-              How We Work
-            </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mt-1">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
               Our 4 Pillars of Fabrication Integrity
             </h2>
             <p className="mt-3 text-slate-600 text-sm sm:text-base">
