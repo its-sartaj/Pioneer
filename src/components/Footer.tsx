@@ -87,7 +87,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   };
 
   return (
-    <footer className="relative bg-[#020b18] text-white overflow-hidden font-sans border-t border-blue-950/80">
+    <footer className="relative bg-[#020b18] text-white overflow-hidden font-sans border-t-2 border-[#E5A93C]">
+      {/* Top Architectural Golden Accent Glow Line */}
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#E5A93C] to-transparent shadow-[0_0_12px_#E5A93C]" />
       
       {/* =========================================================================
           BACKGROUND INDUSTRIAL ATMOSPHERE (EXACT RECREATION OF REFERENCE IMAGE)
@@ -229,7 +231,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             </div>
 
             {/* Clean Architectural Divider */}
-            <div className="h-px w-full max-w-[260px] bg-slate-800/90 my-3" />
+            <div className="h-0.5 w-16 bg-[#E5A93C] my-3 rounded-full shadow-[0_0_8px_rgba(229,169,60,0.5)]" />
 
             {/* Exact Company Description from Reference Image */}
             <p className="text-[13px] text-slate-300 leading-relaxed font-normal pr-2">
@@ -246,14 +248,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             {/* Header: >> QUICK PAGES with Orange Double Chevron & Glow Line */}
             <div>
               <div className="flex items-center gap-1.5">
-                <ChevronsRight className="w-5 h-5 text-[#ff7a00] stroke-[3]" />
+                <ChevronsRight className="w-5 h-5 text-[#E5A93C] stroke-[3]" />
                 <h4 className="text-[15px] font-black text-white uppercase tracking-wider">
                   QUICK PAGES
                 </h4>
               </div>
               {/* Orange Glow Line with flare */}
               <div className="relative h-[2px] w-full max-w-[170px] mt-1.5">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#ff7a00] via-[#ff9500] to-transparent shadow-[0_0_10px_#ff7a00]" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#E5A93C] via-[#f3c56e] to-transparent shadow-[0_0_10px_#E5A93C]" />
               </div>
             </div>
 
@@ -272,10 +274,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <li key={link.id}>
                   <button
                     onClick={() => onNavigate(link.id as PageId)}
-                    className="group flex items-center gap-3 text-slate-200 hover:text-[#ff9500] transition-colors text-left cursor-pointer w-full"
+                    className="group flex items-center gap-3 text-slate-200 hover:text-[#E5A93C] transition-colors text-left cursor-pointer w-full"
                   >
                     {/* Circular Blue Badge with Chevron ( > ) */}
-                    <span className="w-5 h-5 rounded-full bg-[#081a38] border border-[#38bdf8]/60 text-[#38bdf8] flex items-center justify-center shrink-0 shadow-[0_0_6px_rgba(56,189,248,0.35)] group-hover:border-[#ff7a00] group-hover:text-[#ff7a00] group-hover:shadow-[0_0_8px_rgba(255,122,0,0.5)] transition-all">
+                    <span className="w-5 h-5 rounded-full bg-[#081a38] border border-[#38bdf8]/60 text-[#38bdf8] flex items-center justify-center shrink-0 shadow-[0_0_6px_rgba(56,189,248,0.35)] group-hover:border-[#E5A93C] group-hover:text-[#E5A93C] group-hover:shadow-[0_0_8px_rgba(229,169,60,0.5)] transition-all">
                       <ChevronRight className="w-3 h-3 stroke-[3]" />
                     </span>
                     <span className="font-medium tracking-wide group-hover-underline-burgundy">{link.label}</span>
@@ -294,14 +296,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             {/* Header: >> SPECIALIZED SERVICES with Orange Double Chevron & Glow Line */}
             <div>
               <div className="flex items-center gap-1.5">
-                <ChevronsRight className="w-5 h-5 text-[#ff7a00] stroke-[3]" />
+                <ChevronsRight className="w-5 h-5 text-[#E5A93C] stroke-[3]" />
                 <h4 className="text-[15px] font-black text-white uppercase tracking-wider">
                   SPECIALIZED SERVICES
                 </h4>
               </div>
               {/* Orange Glow Line with flare */}
               <div className="relative h-[2px] w-full max-w-[210px] mt-1.5">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#ff7a00] via-[#ff9500] to-transparent shadow-[0_0_10px_#ff7a00]" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#E5A93C] via-[#f3c56e] to-transparent shadow-[0_0_10px_#E5A93C]" />
               </div>
             </div>
 
@@ -345,10 +347,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                     <button
                       onClick={() => onNavigate('services')}
                       title={item.fullTitle}
-                      className="group flex items-center gap-3 text-slate-200 hover:text-[#ff9500] transition-colors text-left cursor-pointer w-full"
+                      className="group flex items-center gap-3 text-slate-200 hover:text-[#E5A93C] transition-colors text-left cursor-pointer w-full"
                     >
                       {/* Technical Blueprint Neon Square Badge */}
-                      <span className="w-6 h-6 rounded-md bg-[#091f42] border border-[#38bdf8] text-[#38bdf8] flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(56,189,248,0.45)] group-hover:border-[#ff7a00] group-hover:text-[#ff7a00] group-hover:shadow-[0_0_10px_rgba(255,122,0,0.5)] transition-all">
+                      <span className="w-6 h-6 rounded-md bg-[#091f42] border border-[#38bdf8] text-[#38bdf8] flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(56,189,248,0.45)] group-hover:border-[#E5A93C] group-hover:text-[#E5A93C] group-hover:shadow-[0_0_10px_rgba(229,169,60,0.5)] transition-all">
                         <IconComponent className="w-3.5 h-3.5 stroke-[2]" />
                       </span>
                       <span className="font-medium tracking-wide truncate group-hover-underline-burgundy">{item.title}</span>
@@ -368,14 +370,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             {/* Header: >> WORKSHOP & OFFICE with Orange Double Chevron & Glow Line */}
             <div>
               <div className="flex items-center gap-1.5">
-                <ChevronsRight className="w-5 h-5 text-[#ff7a00] stroke-[3]" />
+                <ChevronsRight className="w-5 h-5 text-[#E5A93C] stroke-[3]" />
                 <h4 className="text-[15px] font-black text-white uppercase tracking-wider">
                   WORKSHOP & OFFICE
                 </h4>
               </div>
               {/* Orange Glow Line with flare */}
               <div className="relative h-[2px] w-full max-w-[190px] mt-1.5">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#ff7a00] via-[#ff9500] to-transparent shadow-[0_0_10px_#ff7a00]" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#E5A93C] via-[#f3c56e] to-transparent shadow-[0_0_10px_#E5A93C]" />
               </div>
             </div>
 
@@ -384,7 +386,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               
               {/* Location with Orange Map Pin Badge */}
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full bg-[#ff7a00] text-slate-950 flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(255,122,0,0.4)] mt-0.5">
+                <div className="w-6 h-6 rounded-full bg-[#E5A93C] text-slate-950 flex items-center justify-center shrink-0 shadow-[0_0_10px_rgba(229,169,60,0.5)] mt-0.5">
                   <MapPin className="w-3.5 h-3.5 fill-slate-950 text-slate-950 stroke-[2.2]" />
                 </div>
                 <div className="leading-snug text-slate-200 font-medium">
@@ -397,11 +399,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               {/* Large Bold Phone Number with Solid Orange Phone Icon */}
               <div className="flex items-center gap-3 pt-1">
                 <div className="w-6 h-6 flex items-center justify-center shrink-0">
-                  <Phone className="w-5 h-5 text-[#ff7a00] fill-[#ff7a00]" />
+                  <Phone className="w-5 h-5 text-[#E5A93C] fill-[#E5A93C]" />
                 </div>
                 <a 
                   href={`tel:${COMPANY_INFO.phoneRaw}`}
-                  className="text-base sm:text-lg font-black text-white hover:text-[#ff9500] tracking-wide transition-colors"
+                  className="text-base sm:text-lg font-black text-white hover:text-[#E5A93C] tracking-wide transition-colors"
                 >
                   {COMPANY_INFO.phone}
                 </a>
@@ -410,11 +412,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               {/* Email with Solid Orange Mail Icon */}
               <div className="flex items-center gap-3 pt-1">
                 <div className="w-6 h-6 flex items-center justify-center shrink-0">
-                  <Mail className="w-5 h-5 text-[#ff7a00] fill-[#ff7a00]/30" />
+                  <Mail className="w-5 h-5 text-[#E5A93C] fill-[#E5A93C]/30" />
                 </div>
                 <a 
                   href={`mailto:${COMPANY_INFO.email}`}
-                  className="text-[13px] text-slate-200 hover:text-[#ff9500] transition-colors break-all font-medium"
+                  className="text-[13px] text-slate-200 hover:text-[#E5A93C] transition-colors break-all font-medium"
                 >
                   {COMPANY_INFO.email}
                 </a>
@@ -438,7 +440,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           
           {/* Copyright Statement (Exact wording requested by user) */}
           <div className="text-xs sm:text-[13px] text-slate-300 tracking-wide font-normal text-center md:text-left">
-            © 2026 Pioneer Fab Tech. All Rights Reserved. &nbsp;|&nbsp; Designed & Developed by Sajid Web Solution
+            © 2026 <span className="text-[#E5A93C] font-semibold">Pioneer Fab Tech</span>. All Rights Reserved. &nbsp;|&nbsp; Designed & Developed by Sajid Web Solution
           </div>
 
           {/* Sculpted Metallic Curved Capsule / Pill Housing 3 Buttons (Exact Match to Reference Image) */}
@@ -458,7 +460,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               {/* Button 2: Deep sapphire blue circle with white telephone icon */}
               <a
                 href={`tel:${COMPANY_INFO.phoneRaw}`}
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-gradient-to-b from-[#0b2959] to-[#051530] text-white border border-cyan-400/50 shadow-lg flex items-center justify-center hover:border-amber-400 hover:scale-105 active:scale-95 transition-all"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-gradient-to-b from-[#0b2959] to-[#051530] text-white border border-cyan-400/50 shadow-lg flex items-center justify-center hover:border-[#E5A93C] hover:scale-105 active:scale-95 transition-all"
                 title="Call Pioneer Fab Tech"
                 aria-label="Call +91 90295 55233"
               >
