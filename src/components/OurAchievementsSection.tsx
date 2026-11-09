@@ -14,7 +14,7 @@ const ACHIEVEMENTS: AchievementMetric[] = [
     id: 'clients',
     targetCount: COMPANY_INFO.happyClients,
     suffix: '+',
-    label: 'HAPPY CLIENT',
+    label: 'HAPPY CLIENTS',
     icon: 'user',
   },
   {
@@ -28,7 +28,7 @@ const ACHIEVEMENTS: AchievementMetric[] = [
     id: 'delivery',
     targetCount: COMPANY_INFO.deliveredProjects,
     suffix: '+',
-    label: 'PROJECT DELIVERY',
+    label: 'PROJECTS DELIVERED',
     icon: 'vessel',
   },
   {
@@ -216,14 +216,14 @@ export const OurAchievementsSection: React.FC = () => {
       ref={sectionRef}
       className="relative py-20 sm:py-24 lg:py-28 overflow-hidden bg-slate-950 text-white"
     >
-      {/* Industrial factory night photograph background with dark overlay */}
+      {/* Commercial Glass Facade & Storefront Entrance background */}
       <img
         src="./assets/achievements_bg.jpg"
-        alt="Industrial Engineering Plant"
-        className="absolute inset-0 w-full h-full object-cover object-center opacity-30 select-none pointer-events-none"
+        alt="Commercial Glass Facade & Portal Architecture"
+        className="absolute inset-0 w-full h-full object-cover object-center opacity-45 select-none pointer-events-none"
       />
-      {/* Deep blue/slate overlay matching reference image */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#061224]/85 via-[#08182f]/80 to-[#061224]/90" />
+      {/* Deep blue/slate overlay with subtle warmth */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#061224]/80 via-[#08182f]/75 to-[#061224]/85" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -263,7 +263,7 @@ export const OurAchievementsSection: React.FC = () => {
                 </div>
 
                 {/* 2. Red-Orange Accent Divider Line */}
-                <div className="w-12 sm:w-14 h-0.5 bg-[#e26922] mx-auto my-4 transition-all duration-300 group-hover:w-18 group-hover:bg-amber-400" />
+                <div className="w-12 sm:w-14 h-0.5 bg-[#F59E0B] mx-auto my-4 transition-all duration-300 group-hover:w-18 group-hover:bg-amber-400" />
 
                 {/* 3. Big Countable Number with + suffix */}
                 <div className="flex items-baseline justify-center">
