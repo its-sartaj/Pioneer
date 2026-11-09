@@ -51,7 +51,7 @@ export const MaterialSupplyPage: React.FC<MaterialSupplyPageProps> = ({ onNaviga
       <section className="relative bg-slate-950 text-white py-14 sm:py-20 overflow-hidden border-b border-slate-800">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-25 mix-blend-luminosity"
-          style={{ backgroundImage: "url('/assets/images/achievements_bg_1793880633351.jpg')" }}
+          style={{ backgroundImage: "url('./assets/images/achievements_bg_1793880633351.jpg')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-slate-950" />
         
@@ -318,28 +318,28 @@ export const MaterialSupplyPage: React.FC<MaterialSupplyPageProps> = ({ onNaviga
             <div className="lg:col-span-6 grid grid-cols-2 gap-3 sm:gap-4">
               <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-md border border-slate-200">
                 <img 
-                  src="/assets/images/ss_sheet_stack_1794209390147.jpg" 
+                  src="./assets/images/ss_sheet_stack_1794209390147.jpg" 
                   alt="Stainless Steel Sheet Inventory" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-md border border-slate-200">
                 <img 
-                  src="/assets/images/ss_pipes_tubes_1794209432429.jpg" 
+                  src="./assets/images/ss_pipes_tubes_1794209432429.jpg" 
                   alt="Stainless Steel Pipes and Tubes Stock" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-md border border-slate-200">
                 <img 
-                  src="/assets/images/copper_bars_sheet_1794209392520.jpg" 
+                  src="./assets/images/copper_bars_sheet_1794209392520.jpg" 
                   alt="Pure Copper Bars and Sheets" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden aspect-[4/3] shadow-md border border-slate-200">
                 <img 
-                  src="/assets/images/ss_structure_beams_1794209453745.jpg" 
+                  src="./assets/images/ss_structure_beams_1794209453745.jpg" 
                   alt="Structural Stainless Steel Sections" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />

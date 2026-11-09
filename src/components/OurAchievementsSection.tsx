@@ -218,7 +218,7 @@ export const OurAchievementsSection: React.FC = () => {
     >
       {/* Industrial factory night photograph background with dark overlay */}
       <img
-        src="/assets/achievements_bg.jpg"
+        src="./assets/achievements_bg.jpg"
         alt="Industrial Engineering Plant"
         className="absolute inset-0 w-full h-full object-cover object-center opacity-30 select-none pointer-events-none"
       />

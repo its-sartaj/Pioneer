@@ -91,7 +91,7 @@ Sent via Pioneer Fab Tech Contact Portal`);
       <div className="relative h-44 sm:h-52 lg:h-56 w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center text-center px-4">
         {/* Background industrial workshop image with overlay */}
         <img
-          src="/assets/aistudio/WhatsApp_Image_2026-11-03_at_1.04.03_PM_2f9ff5e2.jpeg"
+          src="./assets/aistudio/WhatsApp_Image_2026-11-03_at_1.04.03_PM_2f9ff5e2.jpeg"
           alt="Contact Industrial Banner"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-35"
         />

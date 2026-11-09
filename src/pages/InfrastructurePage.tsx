@@ -150,14 +150,14 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({ onNaviga
             <div className="lg:col-span-7 grid grid-cols-2 gap-3 sm:gap-4">
               <div className="rounded-xl overflow-hidden aspect-4/3 shadow-xs">
                 <img 
-                  src="/assets/aistudio/WhatsApp_Image_2026-11-03_at_1.04.03_PM_2f9ff5e2.jpeg" 
+                  src="./assets/aistudio/WhatsApp_Image_2026-11-03_at_1.04.03_PM_2f9ff5e2.jpeg" 
                   alt="Industrial Workshop Fabrication" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="rounded-xl overflow-hidden aspect-4/3 shadow-xs">
                 <img 
-                  src="/assets/aistudio/WhatsApp_Image_2026-11-03_at_1.04.02_PM__1__b8d93cd1.jpeg" 
+                  src="./assets/aistudio/WhatsApp_Image_2026-11-03_at_1.04.02_PM__1__b8d93cd1.jpeg" 
                   alt="Fitting Portal On Site" 
                   className="w-full h-full object-cover"
                 />

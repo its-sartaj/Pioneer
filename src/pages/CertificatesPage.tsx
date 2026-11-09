@@ -15,22 +15,22 @@ const CERTIFICATES: CertificateItem[] = [
     id: 'gst',
     badgeLabel: 'GST CERTIFICATE',
     title: 'Government of India - GST Registration Certificate (Form GST REG-06)',
-    pdfUrl: '/assets/aistudio/GST_Certificate_e62e8b0e.pdf',
-    previewImage: '/assets/images/gst_cert_preview_1793876909399.jpg',
+    pdfUrl: './assets/aistudio/GST_Certificate_e62e8b0e.pdf',
+    previewImage: './assets/images/gst_cert_preview_1793876909399.jpg',
   },
   {
     id: 'udyam',
     badgeLabel: 'UDYAM CERTIFICATE',
     title: 'Ministry of MSME - Udyam Registration Certificate',
-    pdfUrl: '/assets/aistudio/Print___Udyam_Registration_Certificate_Updated_42ee8545.pdf',
-    previewImage: '/assets/images/udyam_cert_preview_1793876923612.jpg',
+    pdfUrl: './assets/aistudio/Print___Udyam_Registration_Certificate_Updated_42ee8545.pdf',
+    previewImage: './assets/images/udyam_cert_preview_1793876923612.jpg',
   },
   {
     id: 'ptec',
     badgeLabel: 'PTEC CERTIFICATE',
     title: 'Maharashtra State Tax - Profession Tax Certificate (Form II-A)',
-    pdfUrl: '/assets/aistudio/PTEC_Certificate_e18b408a.pdf',
-    previewImage: '/assets/images/ptec_cert_preview_1793876936574.jpg',
+    pdfUrl: './assets/aistudio/PTEC_Certificate_e18b408a.pdf',
+    previewImage: './assets/images/ptec_cert_preview_1793876936574.jpg',
   },
 ];
 
@@ -152,7 +152,7 @@ export const CertificatesPage: React.FC<CertificatesPageProps> = ({ onNavigate }
       <div className="relative h-44 sm:h-52 lg:h-56 w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center text-center px-4">
         {/* Background Image with dark industrial workshop */}
         <img
-          src="/assets/aistudio/WhatsApp_Image_2026-11-03_at_1.04.03_PM_2f9ff5e2.jpeg"
+          src="./assets/aistudio/WhatsApp_Image_2026-11-03_at_1.04.03_PM_2f9ff5e2.jpeg"
           alt="Certificate Header"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-35"
         />

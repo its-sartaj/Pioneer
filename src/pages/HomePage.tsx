@@ -81,14 +81,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <div className="lg:col-span-5 reveal-from-right delay-200">
               <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-slate-200 group bg-slate-100">
                 <img 
-                  src="/assets/aistudio/stainless-steel-glass-railing-500x500-1_c0a27d81.jpg" 
+                  src="./assets/aistudio/stainless-steel-glass-railing-500x500-1_c0a27d81.jpg" 
                   alt="Pioneer Fab Tech Precision Architectural Stainless Steel & Glass Railing Installation" 
                   className="w-full h-[460px] sm:h-[520px] lg:h-[560px] object-cover group-hover:scale-103 transition-transform duration-500"
                   loading="eager"
                   onError={(e) => {
                     const target = e.currentTarget as HTMLImageElement;
                     if (!target.src.includes('WhatsApp_Image')) {
-                      target.src = '/assets/aistudio/WhatsApp_Image_2026-11-03_at_1.03.58_PM_2f881ee9.jpeg';
+                      target.src = './assets/aistudio/WhatsApp_Image_2026-11-03_at_1.03.58_PM_2f881ee9.jpeg';
                     }
                   }}
                 />
