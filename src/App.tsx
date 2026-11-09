@@ -95,7 +95,7 @@ export default function App() {
 
       {/* Main Page Content - Fast, smooth transition with instant loading */}
       <main className="flex-1">
-        <div key={currentPage} className="animate-in fade-in duration-150 ease-out">
+        <div key={currentPage} className="animate-page-smooth">
           {currentPage === 'home' && <HomePage onNavigate={handleNavigate} />}
           {currentPage === 'about' && <AboutPage onNavigate={handleNavigate} />}
           {currentPage === 'services' && <ServicesPage onNavigate={handleNavigate} />}

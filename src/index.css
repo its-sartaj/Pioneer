@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   html, body {
     margin: 0;
     padding: 0;
@@ -9,6 +17,8 @@
 
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
   }
   
   header {
@@ -18,6 +28,10 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
     letter-spacing: -0.02em;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
   }
 }
 
@@ -78,79 +92,100 @@
 }
 
 /* ========================================================
-   Fast, Subtle Scrolling Reveal Animations (Speed Optimized)
+   Silky Smooth Scrolling Reveal Animations (Apple-grade Easing)
    ======================================================== */
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(14px);
-  transition: opacity 0.28s ease-out, transform 0.28s ease-out;
+  transform: translate3d(0, 24px, 0);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
 .reveal-on-scroll.is-revealed {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
-/* Word & Text Reveal: fast, subtle slide up */
+/* Word & Text Reveal: Silky subtle slide up */
 .reveal-word {
   opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.24s ease-out, transform 0.24s ease-out;
+  transform: translate3d(0, 18px, 0);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
 .reveal-word.is-revealed {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
-/* Image Reveal: fast, subtle fade-in */
+/* Image Reveal: Silky soft zoom and fade */
 .reveal-image {
   opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.28s ease-out, transform 0.28s ease-out;
+  transform: translate3d(0, 20px, 0) scale(0.98);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
 .reveal-image.is-revealed {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0) scale(1);
 }
 
 /* Directional Reveals */
 .reveal-from-left {
   opacity: 0;
-  transform: translateX(-14px);
-  transition: opacity 0.28s ease-out, transform 0.28s ease-out;
+  transform: translate3d(-24px, 0, 0);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
 .reveal-from-left.is-revealed {
   opacity: 1;
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .reveal-from-right {
   opacity: 0;
-  transform: translateX(18px);
-  transition: opacity 0.28s ease-out, transform 0.28s ease-out;
+  transform: translate3d(24px, 0, 0);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
 .reveal-from-right.is-revealed {
   opacity: 1;
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
 }
 
-/* Stagger Delays - Snappy & Immediate */
-.delay-75  { transition-delay: 20ms; }
-.delay-150 { transition-delay: 40ms; }
-.delay-200 { transition-delay: 60ms; }
-.delay-300 { transition-delay: 80ms; }
-.delay-400 { transition-delay: 100ms; }
-.delay-500 { transition-delay: 120ms; }
-.delay-600 { transition-delay: 140ms; }
+/* Graceful, organic stagger delays */
+.delay-75  { transition-delay: 50ms; }
+.delay-150 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 150ms; }
+.delay-300 { transition-delay: 220ms; }
+.delay-400 { transition-delay: 280ms; }
+.delay-500 { transition-delay: 340ms; }
+.delay-600 { transition-delay: 400ms; }
+
+/* Page Smooth Switch Keyframe */
+@keyframes pageSmoothFade {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-page-smooth {
+  animation: pageSmoothFade 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Global hardware-accelerated smooth transitions */
+.smooth-hover {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
 
 /* ========================================================
    CSS Left-to-Right Animated Underline Hover Effect

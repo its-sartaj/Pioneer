@@ -38,7 +38,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = () => {
   const [direction, setDirection] = useState<'up' | 'down'>('up');
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  const SLIDE_DURATION = 4500; // 4.5 seconds auto slide
+  const SLIDE_DURATION = 5200; // 4.5 seconds auto slide
 
   const resetAutoSlideTimer = () => {
     if (timerRef.current) clearInterval(timerRef.current);
@@ -77,7 +77,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = () => {
               <img
                 src={slide.image}
                 alt={slide.headline}
-                className={`w-full h-full object-cover object-center sm:object-[center_35%] transition-transform duration-[4500ms] ease-out ${
+                className={`w-full h-full object-cover object-center sm:object-[center_35%] transition-transform duration-[7500ms] [transition-timing-function:cubic-bezier(0.25,1,0.5,1)] ${
                   isActive ? 'scale-108' : 'scale-100'
                 }`}
               />

@@ -88,7 +88,7 @@ export const AutoSliderRow: React.FC<AutoSliderRowProps> = ({
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUpOrLeave}
       onClickCapture={handleClickCapture}
-      className={`flex items-center gap-4 sm:gap-5 overflow-x-auto scroll-smooth py-3 px-1 cursor-grab active:cursor-grabbing select-none snap-x snap-mandatory ${className}`}
+      className={`flex items-center gap-4 sm:gap-5 overflow-x-auto scroll-smooth py-3 px-1 cursor-grab active:cursor-grabbing select-none snap-x snap-proximity will-change-scroll ${className}`}
       style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
     >
       {children}

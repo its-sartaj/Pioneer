@@ -336,7 +336,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onMobil
                         }}
                         onMouseLeave={handleMouseLeave}
                       >
-                        <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-row min-w-[580px] max-w-[660px] animate-in fade-in slide-in-from-top-1 duration-150">
+                        <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-row min-w-[580px] max-w-[660px] animate-in fade-in slide-in-from-top-1 duration-250 ease-out">
                           
                           {/* Left Pane: Stacked list matching image_55f1a2e3.png */}
                           <div className="w-[300px] bg-white border-r border-slate-100 py-1.5 shrink-0 max-h-[430px] overflow-y-auto">

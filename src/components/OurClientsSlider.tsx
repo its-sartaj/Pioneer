@@ -214,7 +214,7 @@ export const OurClientsSlider: React.FC = () => {
 
     const timer = setInterval(() => {
       setOffsetIndex((prev) => prev + 1);
-    }, 2800);
+    }, 3400);
 
     return () => clearInterval(timer);
   }, [isPaused]);
@@ -259,7 +259,7 @@ export const OurClientsSlider: React.FC = () => {
         >
           <div
             onTransitionEnd={handleTransitionEnd}
-            className={`flex ${isTransitioning ? 'transition-transform duration-700 ease-in-out' : ''}`}
+            className={`flex ${isTransitioning ? 'transition-transform duration-[850ms] [transition-timing-function:cubic-bezier(0.25,1,0.5,1)]' : ''}`}
             style={{
               gap: `${gap}px`,
               transform: `translateX(-${offsetIndex * (cardWidth + gap)}px)`,
